@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Receipt Email</title>
+  </head>
+  <body style="margin: 0; background: #faf7ff; font-family: Arial, sans-serif">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="20">
+      <tr>
+        <td align="center">
+          <table
+            width="620"
+            style="
+              background: #fff;
+              border-radius: 20px;
+              border: 1px solid #eee;
+              overflow: hidden;
+            "
+          >
+            <tr>
+              <td style="padding: 30px">
+                <img
+                  src="https://res.cloudinary.com/codexaver/image/upload/v1786314441/pp_logo-removebg-preview_tcg8k1.png"
+                  style="height: 40px"
+                  alt="logo"
+                />
+                <div style="text-align: center">
+                  <div
+                    style="
+                      display: inline-block;
+                      background: #f3e8ff;
+                      color: #7c3aed;
+                      padding: 8px 18px;
+                      border-radius: 20px;
+                      font-weight: bold;
+                    "
+                  >
+                    ★ Official Payment Receipt
+                  </div>
+                  <h1 style="margin: 20px 0 10px; color: #18181b">
+                    Payment Confirmed
+                  </h1>
+                  <p style="color: #6b7280">
+                    Your enrollment is secured. Welcome aboard!
+                  </p>
+                  <table
+                    width="100%"
+                    style="
+                      border: 1px dashed #d8b4fe;
+                      border-radius: 12px;
+                      padding: 18px;
+                    "
+                  >
+                    <tr>
+                      <td style="color: #6b7280">Receipt Number</td>
+                      <td
+                        align="right"
+                        style="color: #7c3aed; font-weight: bold"
+                      >
+                        {{receipt_number}}
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <hr
+                  style="
+                    border: none;
+                    border-top: 1px solid #eee;
+                    margin: 30px 0;
+                  "
+                />
+                <h3 style="letter-spacing: 2px; color: #9ca3af">STUDENT</h3>
+                <table width="100%" cellpadding="8">
+                  <tr>
+                    <td>Name</td>
+                    <td align="right">{{full_name}}</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td align="right">{{email}}</td>
+                  </tr>
+                  <tr>
+                    <td>Phone</td>
+                    <td align="right">{{phone}}</td>
+                  </tr>
+                  <tr>
+                    <td>Program</td>
+                    <td align="right" style="color: #7c3aed">{{program}}</td>
+                  </tr>
+                  <tr>
+                    <td>Duration</td>
+                    <td align="right">
+                      <span
+                        style="
+                          background: #f3e8ff;
+                          color: #7c3aed;
+                          padding: 6px 14px;
+                          border-radius: 20px;
+                        "
+                        >{{duration}}</span
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <hr
+                  style="
+                    border: none;
+                    border-top: 1px solid #eee;
+                    margin: 30px 0;
+                  "
+                />
+                <h3 style="letter-spacing: 2px; color: #9ca3af">PAYMENT</h3>
+                <table width="100%" cellpadding="8">
+                  <tr>
+                    <td>Amount Paid</td>
+                    <td align="right"><b>{{amount}}</b></td>
+                  </tr>
+                  <tr>
+                    <td>Currency</td>
+                    <td align="right">{{currency}}</td>
+                  </tr>
+                  <tr>
+                    <td>Method</td>
+                    <td align="right">{{method}}</td>
+                  </tr>
+                  <tr>
+                    <td>Transaction ID</td>
+                    <td align="right">{{transaction_id}}</td>
+                  </tr>
+                  <tr>
+                    <td>Payment Date</td>
+                    <td align="right">{{payment_date}}</td>
+                  </tr>
+                  <tr>
+                    <td>Status</td>
+                    <td align="right">
+                      <span
+                        style="
+                          background: #dcfce7;
+                          color: #16a34a;
+                          padding: 6px 14px;
+                          border-radius: 20px;
+                        "
+                        >● Paid</span
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <p
+                  style="
+                    text-align: center;
+                    color: #94a3b8;
+                    margin: 35px 0 20px;
+                  "
+                >
+                  This confirms that payment has been received.<br />Please keep
+                  this receipt for your records.
+                </p>
+                <a
+                  href="{{receipt_url}}"
+                  style="
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                    background: linear-gradient(90deg, #7c3aed, #9333ea);
+                    color: #fff;
+                    padding: 18px;
+                    border-radius: 14px;
+                    font-weight: bold;
+                  "
+                  >⬇ Download PDF</a
+                >
+                <p style="text-align: center; color: #c4b5fd">
+                  🔒 Payments are secure and encrypted
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

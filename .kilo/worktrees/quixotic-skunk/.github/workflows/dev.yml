@@ -1,0 +1,39 @@
+name: Dev deploy
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: dev
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.DEV_SERVER}}
+          username: ubuntu
+          key: ${{secrets.PRIVATE_KEY}}
+          envs: GITHUB_SHA
+          script: |
+            cd backend
+            echo "pull new changes"
+            git restore .
+            git pull
+            echo "delete pm2 logs"
+            rm -rf node_modules package-lock.json ./.pm2/logs
+            echo "install dependencies"
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+            nvm use 23
+            pnpm install
+            pnpm build
+            echo "start running PM2 actions"
+            pm2 reload ppdev

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ProductPointers - Complete Enrollment</title>
+<style>
+body{margin:0;background:#faf7ff;font-family:Arial,Helvetica,sans-serif}
+.container{max-width:600px;margin:30px auto;background:#fff;border:1px solid #f3e8ff;border-radius:20px;overflow:hidden}
+.header{padding:32px;text-align:center}
+.icon{width:96px;height:96px;border-radius:50%;margin:20px auto;background:linear-gradient(180deg,#8b5cf6,#7c3aed);color:#fff;font-size:54px;line-height:96px;font-weight:bold}
+h1{color:#18181b;font-size:36px;margin:10px 0}
+p{color:#6b7280;font-size:16px;line-height:1.7}
+.btn{display:block;margin:30px 32px;padding:18px;border-radius:14px;text-decoration:none;text-align:center;font-weight:bold}
+.primary{background:linear-gradient(90deg,#7c3aed,#9333ea);color:#fff}
+.secondary{background:#fff;border:1px solid #d8b4fe;color:#374151}
+.footer{padding:32px;text-align:center;color:#6b7280;font-size:14px}
+a.inline{color:#7c3aed}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<img src="{{logo_url}}" alt="ProductPointers" style="max-width:260px">
+<div class="icon">✓</div>
+<h1>One Final Step 🎉</h1>
+<p>Hi {{first_name}},</p>
+<p>Great job! Your application has been submitted successfully. Complete your payment to confirm your enrollment and secure your spot in the upcoming <strong style="color:#7c3aed;">ProductPointers Product Management Program</strong>.</p>
+</div>
+<a class="btn primary" href="{{payment_link}}">Complete Enrollment →</a>
+<a class="btn secondary" href="{{home_link}}">Back to Home</a>
+<div class="footer">
+<p>We're excited to help you grow into a specialized Product Manager.</p>
+<p>Questions? <a class="inline" href="mailto:hello@productpointers.com">hello@productpointers.com</a></p>
+<p>© 2026 ProductPointers</p>
+</div>
+</div>
+</body>
+</html>

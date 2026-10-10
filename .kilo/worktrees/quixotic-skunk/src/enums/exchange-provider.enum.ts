@@ -1,0 +1,4 @@
+export enum EXCHANGE_PROVIDER {
+  BINANCE = 'BINANCE',
+  BYBIT = 'BYBIT',
+}

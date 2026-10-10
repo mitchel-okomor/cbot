@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #b0001d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+header {
+  height: 116px;
+  display: flex;
+  justify-content: space-between;
+  background-image: url('./images/Mask-group.svg'),
+    linear-gradient(94deg, rgba(145, 2, 26, 1) 16%, rgba(176, 0, 29, 1) 99%);
+  background-repeat: repeat-x;
+}
+.left-image > img {
+  padding: 41px 0 41px 30px;
+}
+
+.right-image > img {
+  padding: 5px 30px 41px 0;
+}
+main {
+  min-height: 50vh;
+  padding: 6%;
+}
+main > section {
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+main > section > ul {
+  list-style-type: none;
+  padding-left: 20px;
+  line-height: 22px;
+}
+.codes {
+  font-size: 25px;
+  letter-spacing: 15px;
+}
+footer {
+  text-align: center;
+}
+footer > div {
+  margin-bottom: 10px;
+}
+
+.socails > a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.tribeCare {
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.regards {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 760px) {
+  main > section {
+    max-width: 100%;
+  }
+}
